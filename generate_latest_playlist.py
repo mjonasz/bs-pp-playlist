@@ -17,7 +17,7 @@ for row in rows:
 image_base64 = ""
 with open("conver.png", "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read())
-    image_base64 = "data:image/png;base64,{}", encoded_string.decode("utf-8")
+    image_base64 = "data:image/png;base64,{}".format(encoded_string.decode("utf-8"))
 
 result = {
   "playlistTitle": "Ranked maps by difficulty",
