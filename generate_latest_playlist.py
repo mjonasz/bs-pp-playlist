@@ -20,7 +20,7 @@ with open("conver.png", "rb") as image_file:
     image_base64 = "data:image/png;base64,{}".format(encoded_string.decode("utf-8"))
 
 result = {
-  "playlistTitle": "Ranked maps by difficulty",
+  "playlistTitle": "Ranked by PP",
   "playlistAuthor": "wiadron",
   "image": image_base64,
   "songs": songs
