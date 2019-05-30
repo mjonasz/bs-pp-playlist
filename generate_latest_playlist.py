@@ -26,4 +26,4 @@ result = {
   "songs": songs
 }
 
-print(json.dumps(result))
+print(json.dumps(result, indent=2))
