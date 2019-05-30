@@ -7,6 +7,7 @@ BeatSaber PP playlist generator based on DuoVR PPFarming (https://duovr.github.i
 2. Change playlist name and author in `generate_latest_playlist.py` code
 3. Run `./generate_latest_playlist.py > your_new_playlist.json` (or `python3 generate_latest_playlist.py > xxx.json`)
 4. Copy generated playlist to `<beat_saber_dir>/Playlist/`
+5. Playlist should be available in game
 
 ## Notes
 * Order of songs in the playlist will be the same as on https://duovr.github.io/PPFarming/ website
