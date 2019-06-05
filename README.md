@@ -11,6 +11,8 @@ It allows you to generate up-to-date Beat Saber playlist with highest PP songs, 
 4. Copy generated playlist to `<beat_saber_dir>/Playlist/`
 5. Playlist should be available in game
 
+OR just download `ranked_by_pp_latest.json` playlist from this repo and directly jump to point 4 of guide above.
+
 ## Data sources
 * http://scoresaber.com/api.php (list of songs with best PP)
 * https://github.com/andruzzzhka/BeatSaberScrappedData (convert scoresaber IDs to playlist keys)
