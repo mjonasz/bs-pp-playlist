@@ -3,6 +3,7 @@ import requests
 import json
 import base64
 import sys
+from datetime import date
 
 top_pp_response = requests.get("http://scoresaber.com/api.php?function=get-leaderboards&cat=3&page=1&limit=300&ranked=1")
 bsaver_data_response = requests.get("https://raw.githubusercontent.com/andruzzzhka/BeatSaberScrappedData/master/beatSaverScrappedData.json")
@@ -34,7 +35,7 @@ with open("cover.png", "rb") as image_file:
     image_base64 = "data:image/png;base64,{}".format(encoded_string.decode("utf-8"))
 
 result = {
-  "playlistTitle": "Ranked by PP",
+  "playlistTitle": "Ranked by PP ({})".format(date.today()),
   "playlistAuthor": "wiadron",
   "image": image_base64,
   "songs": songs
