@@ -1,7 +1,7 @@
 # bs-pp-playlist
 BeatSaber PP playlist generator.
 
-It allows you to generate Beat Saber up-to-date playlist with highest PP songs, sorted by PP.
+It allows you to generate up-to-date Beat Saber playlist with highest PP songs, sorted by PP.
 
 ## Usage
 0. Clone repo and enter to its directory
