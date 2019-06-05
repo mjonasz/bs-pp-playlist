@@ -2,17 +2,31 @@
 import requests
 import json
 import base64
+import sys
 
-response = requests.get("https://raw.githubusercontent.com/DuoVR/PPFarming/master/js/songlist.tsv")
-rows = response.text.split('\r\n')
+top_pp_response = requests.get("http://scoresaber.com/api.php?function=get-leaderboards&cat=3&page=1&limit=300&ranked=1")
+bsaver_data_response = requests.get("https://raw.githubusercontent.com/andruzzzhka/BeatSaberScrappedData/master/beatSaverScrappedData.json")
+
+top_pp = json.loads(top_pp_response.text)
+bsaber_data = json.loads(bsaver_data_response.text)
+
+song_hash_key = {}
+
+for song in bsaber_data:
+  hash = song['hashMd5'].lower()
+  key = song['key']
+  song_hash_key[hash] = key
 
 songs = []
 
-for row in rows:
-  vals = row.split('\t')
-  name = vals[0]
-  key = vals[5]
-  songs.append({"songName": name, "key": key})
+for song in top_pp['songs']:
+  name = song['name']
+  hash = song['id'].lower()
+  try:
+    key = song_hash_key[hash] 
+    songs.append({"songName": name, "key": key})
+  except KeyError:
+    print("Cannot find \"{}\" song with hash \"{}\" in BeatSaver data, skipping..".format(name, hash), file=sys.stderr)
 
 image_base64 = ""
 with open("cover.png", "rb") as image_file:
