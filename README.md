@@ -1,7 +1,7 @@
 # bs-pp-playlist
 BeatSaber PP playlist generator.
 
-It allows you to generate Beat Saber up-to-date playlist with PP songs, sorted by PP.
+It allows you to generate Beat Saber up-to-date playlist with highest PP songs, sorted by PP.
 
 ## Usage
 0. Clone repo and enter to its directory
@@ -12,5 +12,5 @@ It allows you to generate Beat Saber up-to-date playlist with PP songs, sorted b
 5. Playlist should be available in game
 
 ## Data sources
-* https://github.com/andruzzzhka/BeatSaberScrappedData
-* http://scoresaber.com/api.php
+* http://scoresaber.com/api.php (list of songs with best PP)
+* https://github.com/andruzzzhka/BeatSaberScrappedData (convert scoresaber IDs to playlist keys)
