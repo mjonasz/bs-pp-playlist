@@ -1,5 +1,5 @@
 # bs-pp-playlist
-BeatSaber PP playlist generator based on DuoVR PPFarming (https://duovr.github.io/PPFarming/)
+BeatSaber PP playlist generator.
 
 It allows you to generate Beat Saber up-to-date playlist with PP songs, sorted by PP.
 
@@ -11,5 +11,6 @@ It allows you to generate Beat Saber up-to-date playlist with PP songs, sorted b
 4. Copy generated playlist to `<beat_saber_dir>/Playlist/`
 5. Playlist should be available in game
 
-## Notes
-* Order of songs in the playlist will be the same as on https://duovr.github.io/PPFarming/ website
+## Data sources
+* https://github.com/andruzzzhka/BeatSaberScrappedData
+* http://scoresaber.com/api.php
