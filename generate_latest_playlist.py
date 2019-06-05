@@ -5,7 +5,9 @@ import base64
 import sys
 from datetime import date
 
-top_pp_response = requests.get("https://scoresaber.com/api.php?function=get-leaderboards&cat=3&page=1&limit=300&ranked=1")
+number_of_top_songs = 300
+
+top_pp_response = requests.get("https://scoresaber.com/api.php?function=get-leaderboards&cat=3&page=1&ranked=1&limit={}".format(number_of_top_songs))
 bsaver_data_response = requests.get("https://raw.githubusercontent.com/andruzzzhka/BeatSaberScrappedData/master/beatSaverScrappedData.json")
 
 top_pp = json.loads(top_pp_response.text)
